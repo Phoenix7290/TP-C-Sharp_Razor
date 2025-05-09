@@ -1,4 +1,28 @@
 ﻿@page
 @model TP1_Razor.Pages.Exercises.Exercise10Model
 @{
+    ViewData["Title"] = "Exercício 10 - Adicionar Produto";
 }
+
+<h2>Exercício 10 - Adicionar Produto</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Product.Name">Nome:</label>
+        <input asp-for="Product.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Price">Preço:</label>
+        <input asp-for="Product.Price" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+</form>
+
+@if (Model.SubmittedProduct != null)
+{
+    <h3>Produto Adicionado:</h3>
+    <p>Nome: @Model.SubmittedProduct.Name</p>
+    <p>Preço: @Model.SubmittedProduct.Price.ToString("C")</p>
+}
+
+<p><a asp-page="/Index">Voltar para a página inicial</a></p>

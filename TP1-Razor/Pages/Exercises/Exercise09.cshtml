@@ -1,4 +1,17 @@
 ﻿@page
 @model TP1_Razor.Pages.Exercises.Exercise09Model
 @{
+    ViewData["Title"] = "Exercício 9 - Exploração de Estrutura";
 }
+
+<h2>Exercício 9 - Exploração da Estrutura de Projeto ASP.NET Core</h2>
+
+<h3>Respostas:</h3>
+<ul>
+    <li><strong>Qual a função da pasta Pages?</strong> @Model.Answer1</li>
+    <li><strong>O que faz o arquivo Program.cs?</strong> @Model.Answer2</li>
+    <li><strong>Onde são configurados os serviços da aplicação?</strong> @Model.Answer3</li>
+    <li><strong>Como é feito o roteamento de URLs?</strong> @Model.Answer4</li>
+</ul>
+
+<p><a asp-page="/Index">Voltar para a página inicial</a></p>
