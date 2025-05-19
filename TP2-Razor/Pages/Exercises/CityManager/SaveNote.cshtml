@@ -1,0 +1,21 @@
+﻿@page
+@model TP2_Razor.Pages.Exercises.CityManager.SaveNoteModel
+@{
+    ViewData["Title"] = "Questão 10 - Escrita de Arquivos";
+}
+
+<h2>Questão 10: Salvar Nota em Arquivo</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Input.Content">Conteúdo da Nota:</label>
+        <textarea asp-for="Input.Content" rows="5" cols="50"></textarea>
+    </div>
+    <button type="submit">Salvar</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.FilePath))
+{
+    <p>Arquivo salvo com sucesso!</p>
+    <p><a href="@Model.FilePath" download>Baixar @Model.FileName</a></p>
+}

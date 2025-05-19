@@ -1,0 +1,24 @@
+﻿@page
+@model TP2_Razor.Pages.Exercises.CityManager.CreateCountryModel
+@{
+    ViewData["Title"] = "Questão 5 - Objeto Complexo";
+}
+
+<h2>Questão 5: Cadastro de País</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Input.CountryName">Nome do País:</label>
+        <input asp-for="Input.CountryName" />
+    </div>
+    <div>
+        <label asp-for="Input.CountryCode">Código do País:</label>
+        <input asp-for="Input.CountryCode" />
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+
+@if (Model.Country != null)
+{
+    <p>País submetido: <strong>@Model.Country.CountryName</strong> (Código: <strong>@Model.Country.CountryCode</strong>)</p>
+}

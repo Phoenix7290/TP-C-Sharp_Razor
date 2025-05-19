@@ -1,0 +1,22 @@
+﻿@page
+@model TP2_Razor.Pages.Exercises.CityManager.ReadNotesModel
+@{
+    ViewData["Title"] = "Questão 11 - Leitura de Arquivos";
+}
+
+<h2>Questão 11: Leitura de Arquivos</h2>
+
+<h3>Arquivos Disponíveis:</h3>
+<ul>
+    @foreach (var file in Model.Files)
+    {
+        <li><a asp-page="/CityManager/ReadNotes" asp-route-fileName="@file">@file</a></li>
+    }
+</ul>
+
+@if (!string.IsNullOrEmpty(Model.SelectedFileContent))
+{
+    <h3>Conteúdo de @Model.SelectedFileName:</h3>
+    <pre>@Model.SelectedFileContent</pre>
+}
+

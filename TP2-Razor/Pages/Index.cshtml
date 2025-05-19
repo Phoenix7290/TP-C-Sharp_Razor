@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "TP 2";
+}
+
+<div>
+    <h1>TP 2 - Razor Pages</h1>
+
+    <h2>Navegação para Exercícios</h2>
+    <ul>
+        <li><a asp-page="/Exercises/CityManager/CreateCity">Questão 1 - Criando uma Razor Page</a></li>
+        <li><a asp-page="/Exercises/CityManager/CreateCityHandler">Questão 2 - Model Binding com Handler</a></li>
+        <li><a asp-page="/Exercises/CityManager/CreateCityValidated">Questão 3 - Validação com Data Annotations</a></li>
+        <li><a asp-page="/Exercises/CityManager/CreateCityClientValidated">Questão 4 - Validação do Lado do Cliente</a></li>
+        <li><a asp-page="/Exercises/CityManager/CreateCountry">Questão 5 - Objeto Complexo</a></li>
+        <li><a asp-page="/Exercises/CityManager/CreateCountryValidated">Questão 6 - Validação de Código ISO</a></li>
+        <li><a asp-page="/Exercises/CityManager/CreateMultipleCountries">Questão 7 - Múltiplos Países</a></li>
+        <li><a asp-page="/Exercises/CityManager/CityDetails" asp-route-cityName="Rio">Questão 8 - Roteamento (Exemplo: Rio)</a></li>
+        <li><a asp-page="/Exercises/CityManager/CityLinks">Questão 9 - Links com Tag Helpers</a></li>
+        <li><a asp-page="/Exercises/CityManager/SaveNote">Questão 10 - Escrita de Arquivos</a></li>
+        <li><a asp-page="/Exercises/CityManager/ReadNotes">Questão 11 - Leitura de Arquivos</a></li>
+        <li><a asp-page="/Exercises/CityManager/CreateCountryCustomValidation">Questão 12 - Validação Customizada</a></li>
+    </ul>
+</div>

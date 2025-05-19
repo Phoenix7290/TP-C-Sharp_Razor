@@ -1,0 +1,31 @@
+﻿@page
+@model TP2_Razor.Pages.Exercises.CityManager.CreateCountryValidatedModel
+@{
+    ViewData["Title"] = "Questão 6 - Validação de Código ISO";
+}
+
+<h2>Questão 6: Cadastro de País com Validação de Código ISO</h2>
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div>
+        <label asp-for="Input.CountryName">Nome do País:</label>
+        <input asp-for="Input.CountryName" />
+        <span asp-validation-for="Input.CountryName" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Input.CountryCode">Código do País (ex: BR):</label>
+        <input asp-for="Input.CountryCode" />
+        <span asp-validation-for="Input.CountryCode" class="text-danger"></span>
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+
+@if (Model.Country != null)
+{
+    <p>País submetido: <strong>@Model.Country.CountryName</strong> (Código: <strong>@Model.Country.CountryCode</strong>)</p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

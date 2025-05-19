@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1-Console", "TP1-Console\TP1-Console.csproj", "{FF370D09-149A-4065-9AA6-2EE102B2792C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1-Razor", "TP1-Razor\TP1-Razor.csproj", "{76C8E77E-FE5B-45E7-A225-4E1823A88AF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP2-Razor", "TP2-Razor\TP2-Razor.csproj", "{09EAA217-788B-49FD-BE34-4765DD46E8B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{76C8E77E-FE5B-45E7-A225-4E1823A88AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76C8E77E-FE5B-45E7-A225-4E1823A88AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76C8E77E-FE5B-45E7-A225-4E1823A88AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09EAA217-788B-49FD-BE34-4765DD46E8B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09EAA217-788B-49FD-BE34-4765DD46E8B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09EAA217-788B-49FD-BE34-4765DD46E8B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09EAA217-788B-49FD-BE34-4765DD46E8B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

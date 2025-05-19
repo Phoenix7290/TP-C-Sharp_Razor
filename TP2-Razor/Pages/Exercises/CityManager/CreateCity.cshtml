@@ -1,0 +1,20 @@
+﻿@page
+@model CreateCityModel
+@{
+    ViewData["Title"] = "Questão 1 - Criar Cidade";
+}
+
+<h2>Questão 1: Cadastro de Cidade Turística</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="CityName">Nome da Cidade:</label>
+        <input asp-for="CityName" />
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.CityName))
+{
+    <p>Cidade submetida: <strong>@Model.CityName</strong></p>
+}

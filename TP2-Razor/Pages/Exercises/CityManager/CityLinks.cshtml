@@ -1,0 +1,15 @@
+﻿@page
+@model TP2_Razor.Pages.Exercises.CityManager.CityLinksModel
+@{
+    ViewData["Title"] = "Questão 9 - Links com Tag Helpers";
+}
+
+<h2>Questão 9: Links para Detalhes de Cidades</h2>
+
+<p>Escolha uma cidade:</p>
+<ul>
+    @foreach (var city in Model.Cities)
+    {
+        <li><a asp-page="/CityManager/CityDetails" asp-route-cityName="@city">@city</a></li>
+    }
+</ul>
