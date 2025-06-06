@@ -1,0 +1,24 @@
+﻿@page "{name}"
+@model TP3_Razor.Pages.Cities.CityDetailsModel
+@{
+    ViewData["Title"] = "Detalhes da Cidade";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.City != null)
+{
+    <h2>@Model.City.Name</h2>
+    <p>País: @Model.City.Country.CountryName</p>
+    <h3>Propriedades Turísticas</h3>
+    <ul>
+        @foreach (var property in Model.City.Properties)
+        {
+            <li>@property.Name - R$@property.PricePerNight</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Cidade não encontrada.</p>
+}

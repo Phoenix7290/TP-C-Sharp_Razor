@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Lista de Cidades";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome da Cidade</th>
+            <th>País</th>
+            <th>Propriedades</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var city in Model.Cities)
+        {
+            <tr>
+                <td>@city.Name</td>
+                <td>@city.Country.CountryName</td>
+                <td>
+                    <ul>
+                        @foreach (var property in city.Properties)
+                        {
+                            <li>@property.Name - R$@property.PricePerNight</li>
+                        }
+                    </ul>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
